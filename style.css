@@ -402,7 +402,7 @@ section .button button:hover{
 .counter {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 10px;
     }
     #visit-count {
       font-size: 24px;
