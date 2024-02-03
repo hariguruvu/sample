@@ -13,6 +13,53 @@ window.onscroll = function() {
   }
 
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Sample testimonial data (you can replace this with real data from your backend)
+  const testimonialsData = [
+      {
+          name: "charan",
+          occupation: "CEO, XYZ Company",
+          testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          
+      },
+      {
+        name: "shankar",
+        occupation: "CEO, XYZ Company",
+        testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+      {
+          name: "eveen",
+          occupation: "Marketing Manager, ABC Inc.",
+          testimonial: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          
+      }
+  ];
+
+  // Function to dynamically populate testimonials
+  function renderTestimonials() {
+      const testimonialContainer = document.getElementById("testimonialContainer");
+
+      testimonialsData.forEach(testimonial => {
+          const testimonialDiv = document.createElement("div");
+          testimonialDiv.classList.add("testimonial");
+
+          testimonialDiv.innerHTML = `
+              <img src="${testimonial.image}" alt="${testimonial.name}">
+              <div>
+                  <p>${testimonial.testimonial}</p>
+                  <cite>${testimonial.name}, <span>${testimonial.occupation}</span></cite>
+              </div>
+          `;
+
+          testimonialContainer.appendChild(testimonialDiv);
+      });
+  }
+
+  // Call the function to render testimonials
+  renderTestimonials();
+});
+
 
 // Side NavIgation Menu JS Code
 let body = document.querySelector("body");
