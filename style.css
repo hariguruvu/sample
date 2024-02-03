@@ -398,6 +398,17 @@ section .button button:hover{
 	text-align: center; 
 	color:rgb(64, 54, 54);
 }
+
+.counter {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #visit-count {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
 /* Footer CSS */
 footer{
   background: #4070f4;
